@@ -47,7 +47,7 @@ export default async function Page({ params }: { params: { id: string } }) {
       <div className="">
         {ch.map((comment) => {
           return (
-            <div className="">
+            <div className="" key={comment.id}>
               <ThreadCard
                 key={comment._id}
                 id={comment._id.toString()}

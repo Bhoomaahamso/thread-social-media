@@ -22,7 +22,7 @@ const Bottombar = () => {
           if (link.route === "/profile") link.route = `/profile/${userId}`;
 
           return (
-            <div>
+            <div key={link.label}>
               <Link
                 className={`mt-6 px-2 py-1 rounded ${
                   isActive && "bg-purple-500"

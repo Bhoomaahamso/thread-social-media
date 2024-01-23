@@ -21,7 +21,7 @@ const ThreadTab = ({
     <div>
       {result &&
         result.threads.reverse().map((thread) => (
-          <div className="">
+          <div key={thread._id} className="">
             <ThreadCard
               key={thread._id}
               id={thread._id.toString()}

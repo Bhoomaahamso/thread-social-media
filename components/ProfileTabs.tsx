@@ -13,7 +13,7 @@ const ProfileTabs = ({user, userInfo, data}: any) => {
      <Tabs defaultValue="threads" className="w-full ">
           <TabsList className="w-full">
             {profileTabs.map((tab) => (
-              <TabsTrigger className="flex-1 " value={tab.value}>
+              <TabsTrigger key={tab.label} className="flex-1 " value={tab.value}>
                 <Image src={tab.icon} alt={tab.label} width={24} height={24} />
                 <p className="max-sm:hidden">{tab.label}</p>
               </TabsTrigger>
@@ -23,7 +23,7 @@ const ProfileTabs = ({user, userInfo, data}: any) => {
             </TabsTrigger> */}
           </TabsList>
           {profileTabs.map((tab) => (
-            <TabsContent value="threads">
+            <TabsContent key={tab.label} value="threads">
               {/* Make changes to your account here. */}
               <ThreadTab
                 currentUserId={user?.id}

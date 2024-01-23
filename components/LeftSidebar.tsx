@@ -23,7 +23,7 @@ const LeftSidebar = () => {
 
           if(link.route === '/profile') link.route = `/profile/${userId}`;
           return (
-            <div className={`mt-6 px-3 py-1 rounded ${isActive && "bg-purple-500"}`}>
+            <div key={link.label} className={`mt-6 px-3 py-1 rounded ${isActive && "bg-purple-500"}`}>
               <Link className="flex gap-2 items-center" href={link.route}>
                 <Image
                   src={link.imgURL}
